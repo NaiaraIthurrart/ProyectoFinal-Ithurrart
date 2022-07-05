@@ -1,0 +1,187 @@
+* {margin: 5px 0;
+   padding: 5px 0px}
+
+ 
+/*inicio del body*/
+body 
+{background-color: #a0cea6;
+font-family:Georgia, 'Times New Roman', Times, serif}
+
+#body-index 
+{background-image:url("https://www.bbva.com/wp-content/uploads/2019/06/A-0406-DiaMedioAmbiente-BBVA.jpg");}
+
+#body-antropologia 
+{background-image:url("https://static.wikia.nocookie.net/ciencias-de-la-educacion-sociedad/images/0/00/Antropologia-2-evolucion.jpg/revision/latest?cb=20191201023125&path-prefix=es");}
+
+#body-medioambiente 
+{background-image:url("https://faro.travel/blog/wp-content/uploads/2019/05/Reciclaje.jpg");}
+
+
+/* inicio del header */
+header 
+{grid-area: Miheader;}
+
+header h1  
+{font-size: 35px;
+font-weight: bold;
+text-align: center;
+text-decoration: underline;
+background-color:#b0f2c2  ;
+border: 3px solid #b0c2f2;}
+
+/*inicio del nav*/
+nav 
+{background-color: #d8f8e1;
+border: 3px solid #b0c2f2;}
+
+ul 
+{display:flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;}
+
+nav ul li 
+{font-size: 18px;
+font-weight: lighter;
+color: black;
+margin: 0px 5px ;
+padding: 5px 5px; 
+display:inline-block;}
+
+nav ul li a 
+{color: black;
+text-decoration:none}
+
+nav ul li a:hover 
+{color: green }
+
+/*fin del nav*/
+/*fin del header */
+
+
+
+/*inicio del seccion*/
+section  
+{grid-area: Misection;
+margin: 5px 15px ;}
+
+.img-trabajosdeinvestigacion 
+{display:flex;
+justify-content: center;
+align-items: center;}
+
+/*inicio del article*/
+section article h1 
+{margin-left: 20px;
+font-size: 15;
+font-weight: bold;
+text-decoration: underline;}
+
+article 
+{background-color: #d8f8e1;} 
+
+section article p 
+{margin-left: 25pt;
+font-size: 10 px;
+line-height: 18pt;}
+
+.p-formularios 
+{margin: 10px 10px 10px 25px;}
+/*fin article*/
+/*fin del section*/
+
+
+/*inicio aside*/
+aside
+{grid-area: Miaside;
+display:none;}
+
+.img-aside 
+{display: flex;
+justify-content: center;
+align-items: center;
+display: none;}
+/*fin aside*/
+
+/*inicio grid*/
+#cuerpo-index 
+{display:grid;;
+grid-template-areas:
+"Miheader"
+"Misection";
+grid-template-rows: 150px auto;
+grid-row-gap:30px;}
+
+#cuerpo-contacto 
+{display:grid;
+grid-template-areas:
+"Miheader"
+"Misection";
+grid-template-rows: 150 auto;
+grid-row-gap:30px}
+/*fin grid*/
+
+
+/*inicio del footer*/ 
+footer 
+{margin-bottom: 0px;
+display:flex;
+flex-direction: row;
+justify-content: center;}
+
+.footer-estilo 
+{display: flex;
+justify-content: center;
+align-items: center;
+border: 3px solid #b0c2f2;
+background-color: #d8f8e1;}
+/*fin del footer*/
+
+
+/*inicio etiqueta media*/
+@media screen and (min-width: 992px){
+#cuerpo-index
+{display: grid;
+grid-template-areas: 
+"Miheader Miheader"
+"Misection Miaside";
+grid-template-columns: auto 350px;
+grid-template-rows: 150px auto;
+grid-row-gap: 55px;
+grid-column-gap: 15px;}
+aside {display:block}
+.img-aside {display: block;}}
+
+
+@media screen and (min-width: 992px){
+#cuerpo-contacto
+{display: grid;
+grid-template-areas: 
+"Miheader Miheader"
+"Misection Miaside";
+grid-template-columns: auto 350px;
+grid-template-rows: 150px auto;
+grid-row-gap: 55px 15px;
+grid-column-gap: 15px;}
+aside {display:block}
+.img-aside {display: block;}}
+/*fin etiqueta media*/
+
+/*inicio animacion*/
+@keyframes animacion-header-h1 {
+    0% {font-size: 35px; color:black}
+    50% {font-size: 50px; color: grey}
+    100% {font-size: 35px; color:black}}
+
+.animacion-header-h1 {
+font-size: 35px;
+color: black;
+animation-name: animacion-header-h1;
+animation-iteration-count: 2;
+animation-timing-function: linear;
+animation-duration: 4s;
+animation-delay: 3s;
+}
+/*fin animacion*/
+
+
